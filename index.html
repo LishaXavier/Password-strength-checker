@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Password Strength Checker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>Password Strength Checker</h1>
+    <p class="sub">Type a password to see how strong it is. Nothing leaves your browser.</p>
+
+    <label for="password">Password</label>
+    <div class="field">
+      <input type="password" id="password" placeholder="Enter a password" autocomplete="off">
+      <button type="button" id="toggle" aria-label="Show password">Show</button>
+    </div>
+
+    <div class="meter" aria-hidden="true"><div id="bar"></div></div>
+    <p id="label" class="label" aria-live="polite">Start typing…</p>
+
+    <ul id="rules" class="rules">
+      <li data-rule="length">At least 8 characters</li>
+      <li data-rule="lower">A lowercase letter</li>
+      <li data-rule="upper">An uppercase letter</li>
+      <li data-rule="number">A number</li>
+      <li data-rule="symbol">A symbol (!@#$…)</li>
+    </ul>
+
+    <button type="button" id="generate" class="secondary">Generate strong password</button>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
